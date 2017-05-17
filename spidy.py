@@ -73,12 +73,12 @@ def main(current_url=None):
     domain_full_url = '://'.join([protocol, subdomain])
     pattern_domain = re.compile('^http(s)(.*?)\.{}'.format(domain))
 
-    parser = MyHTMLParser()
-    parser.feed(site_html)
+    html_parser = MyHTMLParser()
+    html_parser.feed(site_html)
 
     links_parsed.append(current_url)
 
-    for link in list(parser.links):
+    for link in list(html_parser.links):
         if not link:
             continue
         if len(link) <= 1:
@@ -102,7 +102,7 @@ def main(current_url=None):
         if full_link not in links_to_parse + links_parsed:
             links_to_parse.append(full_link)
 
-    assets_list = [current_url + '/' + i.strip('/') for i in list(parser.assets)]
+    assets_list = [current_url + '/' + i.strip('/') for i in list(html_parser.assets)]
 
     result.append({
         'url': current_url,
