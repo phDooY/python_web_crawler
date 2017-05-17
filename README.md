@@ -2,7 +2,7 @@
 
 Simple recursive web-crawler written using only Python's standard libraries.
 Parameters:
-* _-u_, _--url_ - (*obligatory*) Starting URL, where crawling begins.
+* _-u_, _--url_ - (**obligatory**) Starting URL, where crawling begins.
 * _-v_, _--verbose_ - Prints in STDOUT length of the queue of links to parse.
 * _-o_, _--output_ - Should be followed by output file name in order to write
   result into file.
@@ -29,7 +29,7 @@ parameter:
 python spidy.py -s -v -u "http://david.com"
 ```
 
-In order to save crawling results to file, pass -o "<filename>" parameter:
+In order to save crawling results to file, pass -o "%filename%" parameter:
 ```
 python spidy.py -s -v -o "david.com_crawling.txt" -u "http://david.com"
 ```
