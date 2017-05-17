@@ -119,6 +119,8 @@ def main(current_url=None):
         if args.output:
             with open(args.output, 'w+') as f:
                 f.write(data)
+        else:
+            print data
         exit()
 
     # For verbose STDOUT print
