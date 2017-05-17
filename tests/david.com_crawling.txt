@@ -1,0 +1,8 @@
+[
+  {
+    "url": "http://david.com", 
+    "assets": [
+      "http://david.com/david.swf"
+    ]
+  }
+]
